@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>attr-2</title>
+      <style>
+         ul {
+            list-style-type: none;
+         }
+         li {
+            width: 120px;
+            display: inline-block;
+            margin: 10px;
+         }
+         li a {
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+         }
+         a[target='_blank'] {
+            background-color: yellow;
+            border: 1px solid #ccc;
+            font-weight: normal;
+         }
+         /* 속성 선택자 */
+         /* a태그 중에서 target='_blank'속성을 가진 태그만 선택 */
+         a[target='_self'] {
+            background-color: skyblue;
+            border: 1px dotted #ccc;
+            font-weight: bold;
+         }
+         /* 속성 선택자 */
+         /* a태그 중에서 target='_self'속성을 가진 태그만 선택 */
+      </style>
+   </head>
+   <body>
+      <ul>
+         <li><a href="#" target="_blank">메뉴1</a></li>
+         <li><a href="#" target="_self">메뉴2</a></li>
+         <li><a href="#" target="_self">메뉴3</a></li>
+         <li><a href="#" target="_self">메뉴4</a></li>
+      </ul>
+   </body>
+</html>

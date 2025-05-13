@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>naver_block</title>
+      <style>
+         /* 초기화 코드 */
+         body {
+            margin: 0;
+            padding: 0;
+         }
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+         .wrap {
+            overflow: hidden;
+
+            /* ↓ 이 사이즈보다 작아지면 단된다.  */
+            min-width: 1200px;
+         }
+
+         header {
+            height: 280px;
+            background-color: aqua;
+            position: relative;
+         }
+         /* ↓ 자식 요소에 float 사용시 부모 요소에 overflow:hidden을 적용하는 것이 좋다. 
+         clear속성 대신 사용할 수 있어서 */
+         main {
+            width: 1200px;
+            margin: 0 auto;
+            /* height: 1500px; */
+            overflow: hidden;
+            /* background-color: aquamarine; */
+            /* display: flex; */
+         }
+         /* ↑ .left, .aside 뒤에 있음 */
+         .left {
+            width: 900px;
+            height: 2000px;
+            background-color: bisque;
+            float: left;
+            /* display: flex; */
+         }
+         .aside {
+            width: 300px;
+            height: 2600px;
+            background-color: blueviolet;
+            float: right;
+            /* display: flex; */
+         }
+         /* float는 flex로 대체 가능  */
+         footer {
+            height: 500px;
+            background-color: plum;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <header class="header"></header>
+         <main>
+            <div class="left">
+               <!-- 광고배너 -->
+               <section></section>
+
+               <!-- 뉴스스탠드 -->
+               <section></section>
+
+               <!-- 오늘 읽은만한 글 -->
+            </div>
+            <aside class="aside">
+               <!-- 로그인 -->
+               <section></section>
+
+               <!-- 미니뉴스 -->
+               <section></section>
+
+               <!-- 사이드 광고 -->
+               <section></section>
+
+               <!-- 쇼핑 광고 -->
+               <section></section>
+            </aside>
+         </main>
+         <footer class="footer"></footer>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>datetime</title>
+   </head>
+   <body>
+      <form action="">
+         <p>날짜 지정하기</p>
+         <input type="date" />
+         <input type="month" />
+         <input type="week" />
+
+         <p>시간 지정하기</p>
+         <input type="time" />
+         <input type="datetime-local" />
+         <hr />
+
+         <p>범위 제한하기</p>
+         <label for="birthday">생일</label>
+         <input type="date" name="birthday" id="birthday" min="2024-08-01" max="2024-12-31" value="2024-08-02" />
+
+         <label for="meeting-time">회의시간</label>
+         <input type="time" name="meeting-time" id="meeting-time" min="8:00" max="18:00" value="12:00" step="1800" />
+
+         <label for="meeting-datetime">회의일시</label>
+         <input type="datetime-local" name="meeting-datetime" id="meeting-datetime" min="2024-07-14T08:00" max="2024-07-15T18:00" value="2024-07015T08:00" step="1800" />
+      </form>
+   </body>
+</html>

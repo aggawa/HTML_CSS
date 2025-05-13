@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>grid-6</title>
+      <style>
+         #wrapper {
+            display: grid;
+            width: 700px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas:
+               'box1 box1 box1'
+               'box2 box3 box3'
+               'box2 . box4';
+         }
+         /* 지도처럼 영역을 지정해준다. */
+         /* .은 null값 */
+         .box {
+            padding: 15px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+         }
+         .box1 {
+            background-color: red;
+            grid-area: box1;
+         }
+         /* grid-area 속성으로 영역 이름을 지정해준다. */
+         .box2 {
+            background-color: violet;
+            grid-area: box2;
+         }
+         .box3 {
+            background-color: black;
+            grid-area: box3;
+         }
+         .box4 {
+            background-color: blue;
+            grid-area: box4;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrapper">
+         <div class="box box1">box1</div>
+         <div class="box box2">box2</div>
+         <div class="box box3">box3</div>
+         <div class="box box4">box4</div>
+      </div>
+   </body>
+</html>

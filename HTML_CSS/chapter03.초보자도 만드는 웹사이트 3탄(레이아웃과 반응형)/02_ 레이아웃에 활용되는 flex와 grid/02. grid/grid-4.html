@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>grid-4</title>
+      <style>
+         .items {
+            padding: 15px;
+            background-color: #eee;
+         }
+         .items:nth-child(odd) {
+            background-color: #bbb;
+         }
+         #wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: minmax(100px, auto);
+            grid-column-gap: 30px;
+            /* column 사이의 gap을 뜻한다. (양옆, 컬럼) */
+            grid-row-gap: 20px;
+            /* row 사이의 gap을 뜻한다. (위아래, 줄) */
+            /* grid-gap: 20px 30px; */
+            /* grid-gap: 줄간격 컬럼간격 을 이용하여 한번에 정의할 수 있다. */
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrapper">
+         <div class="items">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nesciunt magni voluptatem.</div>
+         <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+         <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nulla corrupti porro!</div>
+         <div class="items">Lorem ipsum dolor sit.</div>
+         <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quos!</div>
+         <div class="items">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro odit quam sit.</div>
+      </div>
+   </body>
+</html>

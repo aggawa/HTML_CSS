@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>scale</title>
+      <style>
+         #container {
+            width: 800px;
+            height: 200px;
+            margin: 20px auto;
+         }
+         .origin {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+         }
+         .origin > div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+         }
+
+         #scalex:hover {
+            transform: scalex(2); /* x축으로 2배 확대 */
+         }
+         #scaley:hover {
+            transform: scaley(1.5); /* y축으로 1.5배 확대 */
+         }
+         #scalexy:hover {
+            transform: scale(0.7); /* x축,y축으로 0.7배 확대 */
+         }
+         #scalexy2:hover {
+            transform: scale(0.7, 1.2); /* 값을 두개 줄 수도 있음 */
+         }
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <div class="origin">
+            <div id="scalex">x</div>
+         </div>
+         <div class="origin">
+            <div id="scaley">y</div>
+         </div>
+         <div class="origin">
+            <div id="scalexy">x, y</div>
+         </div>
+         <div class="origin">
+            <div id="scalexy2">x, y</div>
+         </div>
+      </div>
+   </body>
+</html>

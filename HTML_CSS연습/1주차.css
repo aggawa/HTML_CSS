@@ -1,0 +1,21 @@
+.search {
+   border: 3px solid green;
+   width: 289px;
+   height: 25px;
+   margin: 0 auto;
+}
+ul {
+   list-style: none;
+}
+li {
+   display: inline;
+   font-size: 17px;
+   padding: 2px 14px;
+   border: 4px solid green;
+   background-color: wheat;
+}
+.link {
+   border: 1px solid black;
+   width: 400px;
+   border-radius: 20px;
+}

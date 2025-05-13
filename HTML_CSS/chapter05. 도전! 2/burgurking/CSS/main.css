@@ -1,0 +1,348 @@
+@charset "uft-8";
+
+/* index.html 페이지만 적용되는 CSS */
+
+/* 
+    0 ~ 766px
+    디폴트 CSS 속성
+*/
+
+.wrap {
+   background: wheat;
+   max-width: 1440px; /* 1440px 이상 커지지 X */
+   margin: 0 auto;
+   margin-top: 100px;
+}
+
+section .con {
+   height: 100%;
+}
+
+.slider {
+   height: 480px;
+}
+
+.slider__content {
+   background: thistle;
+}
+
+.slider__content .carousel {
+   height: 480px;
+}
+
+.slider__content .carousel-item.slide1 {
+   background: url('../images/slide1_S.png');
+   background-size: cover;
+   background-position: center;
+   height: 480px;
+}
+
+.slider__content .carousel-item.slide2 {
+   background: url('../images/slide2_S.png');
+   background-size: cover;
+   background-position: center;
+   height: 480px;
+}
+
+.slider__content .carousel-item.slide3 {
+   background: url('../images/slide3_S.png');
+   background-size: cover;
+   background-position: center;
+   height: 480px;
+}
+
+.youtube {
+   height: 605px;
+}
+
+.youtube__content {
+   background: tomato;
+}
+
+.sns {
+   height: 160px;
+}
+
+.sns__content {
+   background: #683a2f;
+}
+
+.sns__content > .content__list {
+   display: flex;
+   height: 100%;
+}
+
+.sns__content > .content__list > li {
+   flex: 1;
+   text-align: center;
+}
+
+.sns__content > .content__list > li > a {
+   display: flex;
+   flex-direction: column;
+
+   /*  flex-direction: column 사용시 정렬은 반대 */
+   justify-content: center; /* 수직상에서 가운데 정렬 */
+
+   /* <a>의 크기를 <li> 태그의 width, height만큼 키워야 justify-content 적용이 가능하다.  */
+   height: 100%;
+   width: 100%;
+
+   color: white;
+}
+
+.sns__content > .content__list > li .icon {
+   font-size: 3rem;
+}
+
+.sns__content > .content__list > li .icon > .fab {
+   color: white;
+}
+
+.sns__content > .content__list > li .sns-txt {
+   text-align: center;
+}
+
+.sns__content > .content__list > li .sns-txt > span {
+   display: block;
+}
+
+.sns__content > .content__list > li .sns-txt > span:nth-of-type(2) {
+   border-radius: 5px;
+   margin-top: 10px;
+   font-size: 0.8em;
+   font-weight: bold;
+
+   /* 위에서 span에 block 적용으로 block 태그가 되었을때 width: 100% 방지 */
+   display: inline-block;
+}
+
+.guide {
+   height: 800px;
+}
+
+.guide__content {
+   display: flex;
+   flex-direction: column;
+}
+
+.guide__content > div {
+   /* flex-direction이 colum일때는 width가 100%, row일때는 1:1 비율 */
+   flex: 1;
+   text-align: center;
+}
+
+.guide__content > .content__app {
+   background-color: #c7a086;
+   background-image: url(../images/app.png);
+   background-size: cover;
+   background-position: center;
+}
+
+.guide__content > .content__delivery {
+   background-color: #b38567;
+   background-image: url(../images/delivery.png);
+   background-size: cover;
+   background-position: center;
+}
+
+.store {
+   height: 370px;
+}
+
+.store__content {
+   background: white;
+}
+
+.store__content > .search {
+   padding: 50px 5px;
+}
+.store__content > .search .button {
+   border-radius: 30px;
+   margin-top: 15px;
+   font-size: 1em;
+}
+.store__content > .search > h2,
+.store__content > .search > p {
+   text-align: center;
+}
+.store__content > .search > h2 {
+   font-size: 2rem;
+}
+.store__content > .search > p:nth-of-type(1) {
+   font-size: 1.5rem;
+}
+.store__content > .search > p:nth-of-type(2) {
+   margin-bottom: 30px;
+}
+
+.store__content ul {
+   overflow: hidden;
+   width: 79.44%; /* (1144px / 1440px) x 100 */
+   margin: 0 auto;
+}
+
+.store__content ul li {
+   float: left; /* 수평정렬 */
+   width: 33.33%; /* 화면이 767px 아래로 떨어졌을때 <li> 태그를 2행으로 만든다(100/3) */
+   text-align: center;
+}
+
+.store__content ul li > img {
+   /* .search-txt를 display: none를 하면서 블록태그인 p태그가 사라져서 img를 블록으로 바꿔줘야 수직정렬이 된다. */
+   display: block;
+   margin: 0 auto;
+   width: 60px;
+}
+
+.store__content ul li > .search-txt {
+   display: none;
+}
+
+.store__content ul li > em {
+   color: red;
+}
+
+.banner {
+   height: 200px;
+}
+
+.banner__content {
+   background-image: url(../images/bg_home_cs.png);
+   background-size: cover;
+   background-position: center;
+   color: white;
+   display: flex;
+   flex-direction: column;
+}
+
+.banner__content > .order-text {
+   padding: 40px 30px 10px;
+}
+
+.banner__content > .phone {
+   font-size: 2.5rem;
+   padding-left: 30px;
+}
+
+/* 
+767 ~ 1023
+@media all and (min-width: 767px) and (max-width: 1023px)
+*/
+
+/* 767px 이상 */
+@media all and (min-width: 767px) {
+   .guide {
+      height: 380px;
+   }
+
+   .guide__content {
+      flex-direction: row;
+   }
+
+   .store__content ul li {
+      width: 16.66%; /* 화면이 767px 보다 커지면 <li> 태그를 1행으로 만든다(100/6) */
+   }
+
+   /* 화면 767px 보다 커지면 슬라이드 이미지 변경 */
+   .slider__content .carousel-item.slide1 {
+      background: url('../images/slide1.png');
+      background-size: cover;
+      background-position: center;
+      height: 480px;
+   }
+
+   .slider__content .carousel-item.slide2 {
+      background: url('../images/slide2.png');
+      background-size: cover;
+      background-position: center;
+      height: 480px;
+   }
+
+   .slider__content .carousel-item.slide3 {
+      background: url('../images/slide3.png');
+      background-size: cover;
+      background-position: center;
+      height: 480px;
+   }
+
+   .sns__content > .content__list > li > a {
+      flex-direction: row;
+      align-items: center; /* 수직상 가운데 정렬 */
+   }
+
+   .sns__content > .content__list > li .icon {
+      font-size: 5rem;
+      padding-right: 10px;
+   }
+
+   .sns__content > .content__list > li .sns-txt {
+      text-align: left;
+   }
+
+   .store {
+      height: 597px;
+   }
+
+   .store__content > .search {
+      padding: 140px 5px;
+   }
+   .store__content > .search > h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+   }
+
+   .store__content ul li {
+      width: 16.66%;
+      border-right: 1px solid rgb(195, 195, 195);
+   }
+
+   .store__content ul li:last-child {
+      border-right: none;
+   }
+
+   .store__content ul li > img {
+      width: 90px;
+   }
+
+   .store__content ul li > .search-txt {
+      display: block;
+      margin: 15px 0;
+   }
+
+   .store__content ul li > em {
+      font-size: 1.4em;
+   }
+
+   .banner__content {
+      flex-direction: row;
+   }
+
+   .banner__content > .order-text {
+      /* border-box 속성이 적용되어 있을때는 가변그리드는 margin과 width만 계산 */
+      width: 60%;
+   }
+
+   .banner__content > .order-text > h1 {
+      font-size: 2.3rem;
+      padding-top: 60px;
+   }
+   .banner__content > .order-text > p {
+      font-size: 1.3rem;
+      display: inline;
+   }
+
+   .banner__content > .order-text > p:nth-of-type(2)::before {
+      content: '/';
+   }
+
+   .banner__content > .phone {
+      width: 40%;
+      padding-top: 75px;
+      text-align: center;
+   }
+}
+
+/* 1024px ~ */
+@media all and (min-width: 1024px) {
+}

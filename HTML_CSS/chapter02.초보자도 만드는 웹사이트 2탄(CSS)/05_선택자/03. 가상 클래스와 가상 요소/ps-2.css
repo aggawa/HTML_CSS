@@ -1,0 +1,110 @@
+.container {
+   width: 960px;
+   margin: 0 auto;
+}
+.navi {
+   width: 960px;
+   height: 60px;
+   padding-bottom: 10px;
+   border-bottom: 2px solid #ccc;
+}
+
+.navi ul {
+   list-style: none;
+   padding-top: 10px;
+   padding-bottom: 5px;
+}
+.navi ul li {
+   display: inline-block;
+   width: 150px;
+   padding: 10px;
+}
+.navi a:link,
+.navi a:visited {
+   font-size: 14px;
+   padding: 10px;
+   text-decoration: none; /* 밑줄 없음 */
+}
+.navi a:hover,
+.navi a:focus {
+   background-color: #222; /* 배경 색 */
+   color: #fff; /* 글자 색 */
+}
+
+.navi a:active {
+   background-color: #f00; /* 배경 색 */
+}
+
+#signup {
+   background: #fff;
+   border: 1px solid #222;
+   border-radius: 5px;
+   padding: 20px;
+   width: 400px;
+   margin: 30px auto;
+}
+
+#signup fieldset {
+   border: 1px solid #ccc;
+   margin-bottom: 30px;
+}
+
+#signup legend {
+   font-size: 16px;
+   font-weight: bold;
+   padding-left: 5px;
+   padding-bottom: 10px;
+}
+
+#signup ul li {
+   line-height: 30px;
+   list-style: none;
+   padding: 5px 10px;
+   margin-bottom: 2px;
+}
+
+#signup fieldset:first-of-type label {
+   float: left;
+   font-size: 13px;
+   width: 60px;
+}
+
+#signup button {
+   border: 1px solid #222;
+   border-radius: 20px;
+   display: block;
+   font: 16px 맑은고딕, 굴림, 돋움;
+   letter-spacing: 1px;
+   margin: auto;
+   padding: 7px 25px;
+}
+
+#signup b {
+   float: left;
+   font-size: 13px;
+   width: 110px;
+}
+
+/* 모든 input중에 radio가 아닌 것들 만 선택 */
+/* #signup input[type='text'],
+#signup input[type='tel'] {} 
+첫번째 방법*/
+/* 두번째 방법 */
+/* #signup input:not([type='radio']) {
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   padding: 5px;
+   width: 200px;
+} */
+/* not을 이용해서도 선택할 수 있다. */
+#signup input:not([type='radio']):hover {
+   color: red;
+}
+/* 호버든 뭐든 다 사용할 수 있음 */
+
+#signup input:checked + label {
+   color: red;
+   font-weight: bold;
+}
+/* checked 체크박스/라디오 속성 체크했을 때 스타일을 지정*/
+/* input태그에서 바로 뒤에오는(형제태그) label을 선택한다는 것임!! */

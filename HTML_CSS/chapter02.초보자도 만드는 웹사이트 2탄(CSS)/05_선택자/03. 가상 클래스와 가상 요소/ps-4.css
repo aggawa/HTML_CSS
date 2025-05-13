@@ -1,0 +1,33 @@
+.container {
+   width: 960px;
+   margin: 0 auto;
+}
+ul li {
+   margin: 15px;
+}
+
+/* 띄어쓰기 주의 의미 자체가 달라짐 ㅇㅇ */
+/* li.new::first-letter {
+   color: blue;
+} */
+/* list태그면서 class가 new인 요소를 지정 */
+/* first-letter - 영어 그대로 첫번째 글자를 선택한다는 말임 */
+
+li.new::first-line {
+   color: skyblue;
+}
+/* first-line - 이것도 마찬가지 첫번째 줄을 선택한다는 의미 */
+
+li.new::after {
+   content: 'NEW!!';
+   font-size: x-small;
+   padding: 2px 4px;
+   margin: 0 10px;
+   border-radius: 2px;
+   background-color: red;
+   color: white;
+}
+/* after - 특정 요소 뒤에 내용을 추가 */
+/* before - 특정 요소 앞에 내용을 추가 */
+/* content - 넣고싶은 내용 */
+/* font-size - 내용의 문자 크기 */

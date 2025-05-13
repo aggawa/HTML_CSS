@@ -1,0 +1,365 @@
+/* @charset "utf-8" */
+/* ↓ 초기화 CSS */
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 0.9em;
+}
+
+ul {
+   list-style: none; /* 리스트태그 제거 */
+   margin: 0;
+   padding: 0; /* 리스트태그가 있던 기본패딩 제거 */
+}
+
+a {
+   color: black;
+   text-decoration: none; /* a태그의 파란색, 밑줄 기본값 없애기 */
+}
+
+p {
+   margin: 0; /* bootstrap 초가화 css 방지 */
+}
+
+/* 고정형으로 만들기 */
+.wrap {
+   overflow: hidden;
+   min-width: 1200px;
+}
+
+/* header */
+header {
+   position: relative;
+   height: 75px;
+   border-bottom: solid rgb(193, 193, 193);
+   /* ↑ 선이 1200px에 맞게 끊기지 않는 이유는 header는 block태그 이기 때문에 withd가 100%다 */
+   display: flex; /* ↓ 요거 하려구 */
+   align-items: center; /* 수직상의 가운데 정렬 */
+}
+
+nav {
+   width: 1200px;
+   margin: 0 auto; /* nav태그 가운데 정렬 */
+   display: flex;
+   /* container 역할을 하는 부모태그에게 flex를 준다. */
+   /* container란 item들을 잡고있는 툴 */
+   /* nav는 .nav__logo, .nav__top-button, .nav__menu를 잡고있는 container */
+}
+
+.nav__logo {
+   display: inline-block; /* a태그는 block태그이기 때문에 바꿔주기 */
+   width: 150px; /* width, height 등이 잘 안 먹기 때문이다 */
+}
+
+.nav__top-button {
+   width: 500px;
+   display: flex; /* ↓ 요거 하려구 */
+   align-items: center; /* 살짝 위로 올라가있는게 거슬리니 수직 가운데 정렬 */
+   padding-left: 20px; /* 로고와 너무 붙어있어서 */
+}
+.nav__top-button > .dropdown-menu {
+   width: 400px;
+}
+.nav__top-button > .dropdown-menu > li {
+   padding: 5px 5px;
+}
+.nav__top-button > .dropdown-menu a {
+   font-size: 0.9rem;
+}
+/* ↑ 부트스트랩으로 설정된 css도 변경할 수 있다. / 우선순위가 내 css가 더 높음 */
+
+.nav__menu {
+   width: 550px;
+   display: flex;
+   /* .nav__menu는 ul, li를 잡고있는 container */
+   align-items: center; /* 이미 flex는 선언되었고 수직 가운데 정렬 */
+   justify-content: flex-end; /* justify-content: 수평상의 정렬 / display: flex일때만 사용 가능 */
+}
+/* 하위의 태그들의 width의 합이 부모 태그의 width보다 클수 없다. */
+
+.nav__menu > li {
+   padding: 0 10px; /* .nav__menu가 다닥다닥 붙어있는거 떨구기 (상하 0, 좌우 10) */
+}
+
+/* mian */
+main {
+   width: 1200px;
+   margin: 0 auto;
+   overflow: hidden; /* 혹시 모르니 해두자 */
+}
+
+.main-section {
+   margin: 30px 0; /* 공통class인 main-section에 상하30, 좌우0 margin주기 */
+   /* background-color: grey; 공통class를 이용해 틀 확인하기 */
+}
+
+.main__top {
+   height: 260px;
+}
+
+.tap-pane__sub {
+   width: 1100px;
+   margin: 0 auto;
+   margin-top: 25px;
+}
+.btn-main {
+   background-color: transparent;
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 15px 5px;
+   font-size: 15px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+}
+.btn-main > div {
+   padding: 0 10px;
+}
+
+.tap-pane__sub > div {
+   display: flex;
+   justify-content: center;
+}
+
+.main__sso {
+   height: 60px;
+}
+.sso__content {
+   height: 60px;
+   background-color: #343b53;
+   color: white;
+   border-radius: 10px;
+   display: flex; /* 수평정렬 */
+   align-items: center; /* 수직 정렬 */
+}
+.sso__content > p:nth-child(1) {
+   width: 80px;
+   text-align: center;
+}
+.sso__content > p:nth-child(2) {
+   width: 1120px;
+}
+.sso__content > p:nth-child(2) > a {
+   color: white;
+   text-decoration: underline;
+} /* sso__content의 2번째 p태그의 a태그 */
+
+.main__banner1 {
+   height: 500px;
+} /* 자식태그에 height가 있으면 부모태그의 height는 지워도 됨 툴 보려고 해놨던거임 */
+.banner1__content {
+   height: 500px;
+   background-image: linear-gradient(rgba(1, 2, 23, 0.5), rgba(0, 0, 0, 0.2)), url(../images/banner1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 100%;
+   border-radius: 10px;
+   color: white;
+   display: flex;
+}
+.banner1__content > div:nth-child(1) {
+   width: 500px;
+   padding: 70px 40px;
+}
+.banner1__content > div:nth-child(2) {
+   width: 700px;
+}
+
+.main__banner2 {
+   height: 260px;
+}
+.banner2__content {
+   height: 260px;
+   border-radius: 10px;
+   border: 1px solid gray;
+   display: flex;
+}
+.banner2__content > div:nth-child(1) {
+   width: 400px;
+   background-image: url(../images/banner2.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100% 100%; /* 이부분 다시 보기 */
+   border-radius: 10px 0 0 10px; /* border-radius 방향별로 주기 */
+}
+.banner2__content > div:nth-child(2) {
+   width: 550px;
+   padding: 28px 20px;
+}
+.banner2__content > div:nth-child(3) {
+   width: 250px;
+   padding: 50px 0; /* 이런 수치는 알아서 잘 맞추면 됨 (위아래) */
+   text-align: center; /* 수평 가운데 정렬 */
+}
+/* index.html파일에서 준 width는 이미지의 크기, css파일에서 준 width는 박스의 크기*/
+
+.main__travel-helper {
+   height: 140px;
+}
+.main__travel-helper > h2 {
+   font-size: 30px;
+   font-weight: 500px;
+}
+.travel-helper__content {
+   height: 80px;
+   display: flex; /* 수평정렬을 위한 flex 1,2,3의 부모태그 */
+}
+.btn-helper {
+   /* 공통 class */
+   border: 1px solid gray;
+   border-radius: 10px;
+   width: 33.33%; /* 세 박스 균일하게 3등분 배분 */
+   margin: 0 10px; /* 양옆마진 */
+   padding: 14px;
+   cursor: pointer;
+}
+.btn-helper > div {
+   display: flex;
+   align-items: center;
+   height: 50%;
+}
+.btn-helper > div > div:nth-child(1) {
+   width: 70%;
+   font-size: 20px;
+}
+.btn-helper > div > div:nth-child(2) {
+   width: 30%;
+   text-align: right;
+}
+
+.main__banner3 {
+   height: 190px;
+}
+.banner3__content {
+   display: flex;
+   border: 1px solid gray;
+   border-radius: 10px;
+   height: 190px;
+}
+.banner3__content > div:nth-child(1) {
+   background-image: url(../images/banner3.jpg);
+   width: 55%;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-position: center;
+   border-radius: 10px 0 0 10px;
+}
+.banner3__content > div:nth-child(2) {
+   width: 45%;
+   padding: 10px 20px;
+}
+
+.main__early-reservation {
+   /* height: 310px; */
+}
+.main__early-reservation > h2 {
+   font-size: 30px;
+   font-weight: 500px;
+}
+.main__early-reservation > div {
+   display: flex; /* a태그 안에 p태그가 있어서 block처럼 정렬이 되므로 flex를 지정 */
+   height: 250px;
+}
+.main__early-reservation > div > .early-reservation1 {
+   width: 880px;
+   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(5, 1, 20, 0.8)), url(../images/early1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   margin-right: 20px;
+   padding-left: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   color: white;
+}
+.main__early-reservation > div > .early-reservation2 {
+   width: 320px;
+}
+
+.main__more {
+   height: 60px;
+}
+/* 각 구역의 height먼저 잡아주기 */
+.main__more > div {
+   height: 60px;
+   text-align: center;
+   padding: 20px 0;
+}
+.main__more a {
+   color: rgb(66, 66, 243);
+}
+.main__more a:hover {
+   text-decoration: underline;
+}
+
+/* footer */
+footer {
+   height: 600px;
+}
+.footer_content {
+   width: 1200px;
+   margin: 0 auto;
+}
+.footer_content > div:nth-child(1) {
+   border-bottom: 1px solid rgb(184, 184, 184);
+}
+.sitemap {
+   display: flex;
+}
+.sitemap > li {
+   width: 300px;
+   padding: 10px;
+} /* li width값 합 1200px */
+.sitemap > li > ul {
+   padding-top: 10px;
+}
+.sitemap > li > ul > li {
+   padding: 7px 0;
+}
+.sitemap > li > ul > li > a {
+   color: rgb(79, 79, 255);
+   font-size: 12px;
+}
+.footer_content > div:nth-child(2) {
+   padding: 50px 0;
+}
+
+/* 지원버튼 */
+.support {
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+
+   width: 80px;
+   height: 35px;
+   border-radius: 30px;
+   box-shadow: 2px 2px 2px 2px rgb(195, 195, 195);
+   text-align: center;
+   line-height: 35px;
+
+   background-color: white;
+   color: rgb(59, 59, 126);
+}
+.support:hover {
+   background-color: aliceblue;
+}
+
+/* 모달 */
+.modal-body {
+   height: 300px;
+   overflow-y: scroll;
+}
+.modal-body > h3 {
+   font-size: 18px;
+   font-weight: bold;
+}
+.modal-body > ul a {
+   color: darkblue;
+}
+.modal-body > ul a:hover {
+   text-decoration: underline;
+}
+
+/* fontawesome - 04.도전 교안 다운 사이트에서 다운받고 압축 해제 후 expedia에 드래그로 넣기 */

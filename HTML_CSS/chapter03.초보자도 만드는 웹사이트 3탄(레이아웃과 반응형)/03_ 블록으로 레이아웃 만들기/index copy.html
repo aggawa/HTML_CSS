@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>naver_block</title>
+      <style>
+         /* 초기화 코드 */
+         body {
+            margin: 0;
+            padding: 0;
+         }
+
+         ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+         .wrap {
+            overflow: hidden;
+
+            /* ↓ 이 사이즈보다 작아지면 단된다.  */
+            min-width: 1200px;
+         }
+
+         header {
+            height: 280px;
+            background-color: aqua;
+            position: relative;
+         }
+         .header__search {
+            height: 200px;
+         }
+         .header__menu {
+            height: 80px;
+         }
+
+         /* ↓ 자식 요소에 float 사용시 부모 요소에 overflow:hidden을 적용하는 것이 좋다. 
+         clear속성 대신 사용할 수 있어서 */
+         main {
+            width: 1200px;
+            margin: 0 auto;
+            /* height: 1500px; */
+            overflow: hidden;
+            /* background-color: aquamarine; */
+            /* display: flex; */
+         }
+         /* ↑ .left, .aside 뒤에 있음 */
+         .left {
+            width: 900px;
+            height: 2600px;
+            background-color: bisque;
+            float: left;
+            /* display: flex; */
+         }
+         .left__banner {
+            height: 150px;
+         }
+         .left__news {
+            height: 450px;
+         }
+         .left__themecast {
+            height: 2000px;
+         }
+         /* ↑ 얘가 2000px니까 themecast 둘의 합이 2000px를 넘기면 안댐 */
+         .themecast__header {
+            height: 50px;
+         }
+         .themecast__contents {
+            height: 1950px;
+         } /* main공간같은거 뭔말알? */
+         .themecast__living1,
+         .themecast__living2 {
+            height: 800px;
+         }
+         .living__list {
+            height: 100%;
+         }
+         .living__list li {
+            height: 20%; /* 리스트가 각각 20%씩 차지함 */
+            display: flex;
+         }
+         .living__list__img {
+            display: block;
+            width: 250px;
+         }
+         .living__list__contents {
+            display: block;
+            width: 650px;
+         }
+         /* 둘의 width는 왜 합쳐서 900일까 */
+         /* 이들의 부모인 .left의 width가 900이어서 이다. */
+
+         .themecast__hotclick {
+            height: 350px;
+            display: flex;
+         }
+         /* ↑ 얘들은 1950px 넘으면 안됨 왜인지 알지? */
+         .hotclick__funding {
+            flex: 1; /* 3등분 비율 맞추기 */
+            /* width: 33.33% 이렇게 해도 댐*/
+         }
+
+         .aside {
+            width: 300px;
+            height: 2600px;
+            background-color: blueviolet;
+            float: right;
+            /* display: flex; */
+         }
+         /* float는 flex로 대체 가능  */
+         .aside__login {
+            height: 150px;
+         }
+         .aside__mini {
+            height: 50px;
+         }
+         .aside__banner {
+            height: 150px;
+         }
+         .aside__shopping {
+            height: 100%;
+         }
+
+         footer {
+            height: 500px;
+            background-color: plum;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="wrap">
+         <header class="header">
+            <div style="background-color: #222222" class="header__search">검색창</div>
+            <div style="background-color: blue" class="header__menu">메뉴</div>
+         </header>
+         <main>
+            <div class="left">
+               <!-- 광고배너 -->
+               <section style="background-color: coral" class="left__banner">배너</section>
+
+               <!-- 뉴스스탠드 -->
+               <section style="background-color: yellowgreen" class="left__news">뉴스스탠드</section>
+
+               <!-- 오늘 읽은만한 글 -->
+               <section style="background-color: dimgray" class="left__themecast">
+                  <div style="background-color: deepskyblue" class="themecast__header">자동차 웹툰 경제 추천구독 레시피 리빙 책방</div>
+                  <div class="themecast__contents">
+                     <div style="background-color: brown" class="themecast__living1">
+                        <ul class="living__list">
+                           <li>
+                              <a href="#" class="living__list__img">이미지</a>
+                              <a href="#" class="living__list__contents">내용</a>
+                           </li>
+                           <li>
+                              <a href="#" class="living__list__img">이미지</a>
+                              <a href="#" class="living__list__contents">내용</a>
+                           </li>
+                           <li>
+                              <a href="#" class="living__list__img">이미지</a>
+                              <a href="#" class="living__list__contents">내용</a>
+                           </li>
+                           <li>
+                              <a href="#" class="living__list__img">이미지</a>
+                              <a href="#" class="living__list__contents">내용</a>
+                           </li>
+                           <li>
+                              <a href="#" class="living__list__img">이미지</a>
+                              <a href="#" class="living__list__contents">내용</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div style="background-color: violet" class="themecast__living2">
+                        <ul>
+                           <ul class="living__list"></ul>
+                        </ul>
+                     </div>
+                     <div style="background-color: darkgoldenrod" class="themecast__hotclick">
+                        <div class="hotclick__funding">펀딩</div>
+                        <div class="hotclick__funding">펀딩</div>
+                        <div class="hotclick__funding">펀딩</div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <aside class="aside">
+               <!-- 로그인 -->
+               <section style="background-color: cadetblue" class="aside__login">로그인</section>
+
+               <!-- 미니뉴스 -->
+               <section style="background-color: blueviolet" class="aside__mini">미니뉴스</section>
+
+               <!-- 사이드 광고 -->
+               <section style="background-color: blanchedalmond" class="aside__banner">사이드 광고</section>
+
+               <!-- 쇼핑 광고 -->
+               <section style="background-color: darkgreen" class="aside__shopping">쇼핑 광고</section>
+            </aside>
+         </main>
+         <footer class="footer"></footer>
+      </div>
+   </body>
+</html>

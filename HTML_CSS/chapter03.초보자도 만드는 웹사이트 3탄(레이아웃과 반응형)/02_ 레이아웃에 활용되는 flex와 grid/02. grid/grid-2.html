@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>grid-2</title>
+      <style>
+         #wrapper {
+            display: grid;
+            /* grid-template-columns: 2fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr); /* 1fr을 3번 반복하겠다는 의미 */
+            /* fr - grid에서 사용하는 비율단위 */
+            /* grid-template-rows: 100px; */
+            grid-template-rows: minmax(100px, auto);
+            /* height의 기본값 설정 / 최소 행높이, 최대 행높이 */
+            /* auto는 컨텐츠의 크기에 맞춰서 자동으로 지정 */
+            width: 600px;
+         }
+         .items {
+            padding: 10px;
+            background-color: #eee;
+         }
+         .items:nth-child(odd) {
+            /* odd - 홀수 */
+            background-color: #ddd;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrapper">
+         <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+         <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+         <div class="items">Lorem ipsum dolor sit amet.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+         <div class="items">Lorem ipsum dolor sit.Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+         <div class="items">Lorem, ipsum dolor.</div>
+      </div>
+   </body>
+</html>

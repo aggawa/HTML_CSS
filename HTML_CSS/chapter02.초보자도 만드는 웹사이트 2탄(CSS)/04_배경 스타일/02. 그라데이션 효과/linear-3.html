@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>linear-3</title>
+      <style>
+         div {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            margin: 30px;
+         }
+         .grad {
+            background: linear-gradient(70deg, blue, pink 30%, skyblue);
+         } /* n%를 이용한 중지점 지정하기 */
+         .grad2 {
+            background: linear-gradient(160deg, red, white 70%, green);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="grad"></div>
+      <div class="grad2"></div>
+   </body>
+</html>

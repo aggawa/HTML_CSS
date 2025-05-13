@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>em_rem</title>
+      <style>
+         html {
+            font-size: 30px;
+         }
+         #content {
+            font-size: 10px;
+         }
+         .para1 {
+            font-size: 2em; /* 부모태그의 2배 - 부모태그 div 10 * 2 = 20 */
+         }
+         .para2 {
+            font-size: 2rem; /* html문서의 2배 - 30 * 2 = 60 */
+         }
+         .para3 {
+            font-size: 2em; /* 부모태그의 2배 - 부모태그 body 30 * 2 = 60 */
+         }
+      </style>
+   </head>
+   <body>
+      <div id="content">
+         <p class="para1">1. lorem</p>
+      </div>
+      <p class="para2">2. lorem</p>
+      <p class="para3">3. lorem</p>
+   </body>
+</html>

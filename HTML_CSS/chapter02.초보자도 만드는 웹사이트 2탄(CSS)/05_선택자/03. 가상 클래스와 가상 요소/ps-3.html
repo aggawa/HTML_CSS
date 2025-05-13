@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="utf-8" />
+      <title>가상 요소</title>
+      <style>
+         input:enabled {
+            background-color: aqua;
+         }
+         input:disabled {
+            background-color: red;
+         }
+         button:disabled {
+            background-color: orange;
+         }
+      </style>
+   </head>
+   <body>
+      <h3>회원가입</h3>
+
+      <form>
+         <label> 이름: <input type="text" name="name" /> </label>
+         <br />
+
+         <label> 이메일: <input type="email" name="email" disabled /> </label>
+         <br />
+
+         <button type="submit">제출</button>
+         <button type="button" disabled>비활성 버튼</button>
+      </form>
+   </body>
+</html>
+
+<!-- enabled, disabled -->
+<!-- enabled 지정한 요소를 사용할 수 있는 상태일 때 스타일 적용 -->
+<!-- disabled 지정한 요소를 사용할 수 없는 상태일 때 스타일 적용 -->

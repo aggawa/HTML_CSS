@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>flex-8_3</title>
+      <style>
+         .container {
+            width: 80%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+         }
+
+         .box {
+            width: 400px;
+            height: 60px;
+            margin: 5px;
+            background-color: #222;
+         }
+         p {
+            color: #fff;
+            text-align: center;
+         }
+
+         /* flex-grow - container 사이즈가 늘어날 때 item이 어떤 비율로 줄어들지 지정 */
+         .shrink-1 {
+            flex-shrink: 1;
+         }
+         .shrink-2 {
+            flex-shrink: 2;
+         }
+         .shrink-3 {
+            flex-shrink: 3;
+         } /* 순서대로 1 : 2 : 3 비율로 줄어듬 */
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="box shrink-1"><p>1</p></div>
+         <div class="box shrink-2"><p>2</p></div>
+         <div class="box shrink-3"><p>3</p></div>
+      </div>
+   </body>
+</html>

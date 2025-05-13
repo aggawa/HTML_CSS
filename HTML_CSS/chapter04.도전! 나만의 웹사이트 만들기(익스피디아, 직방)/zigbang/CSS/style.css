@@ -1,0 +1,186 @@
+@charset "utf-9";
+
+/* 초기화 CSS */
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 0.9em;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+p {
+   margin: 0;
+}
+
+/* 고정형 만들기 */
+.wrap {
+   min-width: 1300px;
+   overflow: hidden;
+}
+
+/* 헤더 */
+header {
+   position: relative;
+   height: 85px;
+}
+
+nav {
+   background-color: white;
+   border-bottom: 1px solid rgb(193, 193, 193);
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+/* 상위 메뉴 */
+.nav__menu > li {
+   display: inline-block; /* 수평 정렬 */
+   padding: 20px;
+
+   /* 하위 메뉴를 만들기 위해서 relative 선언*/
+   position: relative;
+   top: 0;
+}
+
+.w1 {
+   display: block;
+   font-size: 17px;
+   font-weight: bold;
+}
+.w2 {
+   display: block;
+   font-size: 13px;
+}
+
+/* 하위 메뉴 */
+.sub-menu {
+   display: none;
+   width: 200px;
+   background-color: white;
+   border: 1px solid rgb(202, 202, 202);
+   position: absolute; /* relative를 기준으로 잡음(상위li 태그) */
+   top: 85px; /* header의 height가 85px여서 */
+   z-index: 9999;
+   /* 하위 메뉴가 안 보이는걸 방지 */
+}
+
+/* 상위 메뉴에 호버시 하위 메뉴를 보여줌 */
+.nav__menu li:hover .sub-menu {
+   display: block;
+}
+
+.nav__menu li:hover a {
+   /* 상위 메뉴 호버시 */
+   color: orange;
+}
+
+.nav__menu li:hover .sub-menu a {
+   /* 하위 메뉴 호버시 */
+   color: black;
+}
+
+.sub-menu > li {
+   padding: 10px;
+}
+
+/* 로그인 및 회원가입 버튼 */
+nav .login {
+   font-size: 11px;
+   background-color: rgb(232, 232, 232);
+   border: 1px solid rgb(202, 202, 202);
+   border-radius: 5px;
+   color: black;
+   width: 125px;
+   height: 30px;
+   margin-right: 20px;
+}
+
+nav .right-menu__btn {
+   width: 113px;
+}
+
+/* main */
+.main-section {
+   width: 100%;
+   height: 100px;
+   min-height: 600px;
+   border: hidden;
+   display: flex;
+}
+
+.main__banner1 {
+   width: 100%;
+   height: 460px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   background-size: cover;
+   background-image: url(../images/bg.jpg);
+}
+
+/* banner1 */
+.banner1__content {
+   width: 942px;
+   height: 340px;
+   padding-top: 156px;
+}
+
+.banner1__content > p {
+   width: 684px;
+   height: 46px;
+   text-shadow: rgb(255, 255, 255) 0px 16px 40px;
+   font-size: 40px;
+   font-weight: bold;
+   font-style: normal;
+   line-height: 1.15;
+   letter-spacing: normal;
+   text-align: center;
+   color: white;
+   margin: 0 auto;
+   cursor: default;
+}
+
+/* board_list */
+.board_list {
+   width: 100%;
+   padding: 40px 0 27px;
+   background-color: white;
+   overflow: hidden;
+}
+
+.list__contents {
+   margin: 0 auto;
+   flex-direction: row;
+   display: flex;
+   justify-content: space-between;
+}
+
+.list__fix {
+   width: 260px;
+   display: block;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+.contbox1 {
+   margin-top: 20px;
+}
+
+.list__name > p {
+   color: black;
+   font-size: 16px;
+   font-weight: bold;
+   line-height: 20px;
+   padding: 4px 0 11px;
+   border-bottom: 1px solid gray;
+}

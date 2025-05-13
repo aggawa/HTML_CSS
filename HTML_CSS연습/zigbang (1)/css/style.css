@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+/* 초기화 CSS */
+
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 0.9em;
+   height: auto;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+/* 부트스트랩 초기화 CSS 방지 */
+p {
+   margin: 0;
+}
+
+/* 고정형 만들기 */
+
+.wrap {
+   min-width: 1300px;
+   overflow: hidden;
+}
+
+/* 헤더 */
+
+header {
+   position: relative;
+   height: 85px;
+}
+
+nav {
+   background: white;
+   border-bottom: 1px solid rgb(193, 193, 193);
+   align-items: center;
+   display: flex;
+   width: 100%;
+}
+
+/* 상단 메뉴 고정 ..? */
+
+/* 상위 메뉴 */
+.nav__menu > li {
+   /* 수평정렬 */
+   display: inline-block;
+   padding: 20px;
+
+   /* 하위 메뉴를 만들기 위해 적용 */
+   position: relative;
+   top: 0;
+}
+
+.w1 {
+   display: block;
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.w2 {
+   display: block;
+   font-size: 13px;
+}
+
+/* 하위 메뉴 */
+.sub-menu {
+   display: none;
+   width: 200px;
+   background: white;
+   border: 1px solid rgb(202, 202, 202);
+
+   /* 하위메뉴의 위치 지정을 위해 absolute적용
+   (상위 relative 포지션을 가지고 있는 li태그를 기준으로 한다) */
+   position: absolute;
+
+   /* 메뉴(header)의 height가 85px 이므로 */
+   top: 85px;
+
+   /* 하위메뉴 안보임 방지 */
+   z-index: 9999;
+}
+
+/* 상위메뉴에 호버시 하위메뉴(.sub-menu)를 보여줌  */
+.nav__menu li:hover .sub-menu {
+   display: block;
+}
+
+.nav__menu li:hover a {
+   /* 상위메뉴 호버시 컬러 */
+   color: orange;
+}
+
+.nav__menu li:hover .sub-menu a {
+   /* 하위메뉴 호버시 컬러  */
+   color: black;
+}
+
+.sub-menu > li {
+   padding: 10px;
+}
+
+/* 로그인 및 회원가입 버튼 */
+
+nav .login {
+   font-size: 11px;
+   background-color: rgb(232, 232, 232);
+   border: 1px solid rgb(202, 202, 202);
+   border-radius: 5px;
+   color: black;
+   width: 125px;
+   height: 30px;
+   margin-right: 20px;
+}
+
+nav .right-menu__btn {
+   width: 113px;
+}
+
+/* main */
+/* banner1 */
+main {
+   width: 100%;
+   height: 100%;
+   min-height: 600px;
+   overflow: hidden;
+}
+.main__banner1 {
+   position: relative;
+   width: 100%;
+   height: 460px;
+   margin: 0 auto;
+   align-items: center;
+   background-size: cover;
+   background-image: url(../images/bg.jpg);
+}
+.banner1__wright {
+   width: 942px;
+   height: 340px;
+   padding: 156px;
+   margin: 0 auto;
+}
+.wright__in {
+   width: 684px;
+   height: 46px;
+   font-size: 40px;
+   font-weight: bold;
+   text-shadow: rgb(255, 255, 255) 0px 16px 40px;
+   text-align: center;
+   color: white;
+   margin: 0 auto;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: 1.15;
+   letter-spacing: normal;
+   cursor: default;
+}
+
+.banner1__search {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.search__in {
+   flex-direction: column;
+   width: 574px;
+   height: 196px;
+}
+
+.tab-menu {
+   width: 574px;
+   height: 40px;
+   line-height: 40px;
+   display: flex;
+   background-color: rgba(4, 17, 59, 0.8);
+   font-weight: 900;
+   border-radius: 10px;
+   margin-bottom: 26px;
+}
+
+.tab-sub {
+   width: 20%;
+   text-align: center;
+   color: white;
+}
+
+.tab-sub {
+   background-color: rgba(4, 17, 59, 0.8);
+   width: 20%;
+   text-align: center;
+   color: white;
+   border: none;
+   font-weight: bold;
+}
+
+.sub1 {
+   border-radius: 10px 0 0 10px;
+}
+.sub5 {
+   border-radius: 0 10px 10px 0;
+}
+
+.tab-sub.sub1:focus-within {
+   background-color: white;
+   width: 20%;
+   text-align: center;
+   color: black;
+   border-radius: 8px;
+}
+.tab-sub.sub2:focus-within {
+   background-color: white;
+   width: 20%;
+   text-align: center;
+   color: black;
+   border-radius: 8px;
+}
+.tab-sub.sub3:focus-within {
+   background-color: white;
+   width: 20%;
+   text-align: center;
+   color: black;
+   border-radius: 8px;
+}
+.tab-sub.sub4:focus-within {
+   background-color: white;
+   width: 20%;
+   text-align: center;
+   color: black;
+   border-radius: 8px;
+}
+.tab-sub.sub5:focus-within {
+   background-color: white;
+   width: 20%;
+   text-align: center;
+   color: black;
+   border-radius: 8px;
+}
+
+.search__box {
+   height: 60px;
+   background-color: white;
+   border-radius: 8px;
+   display: flex;
+}
+
+.search_text > input {
+   width: 508px;
+   height: 60px;
+   font-size: 16px;
+   line-height: 60px;
+   border-radius: 8px 0 0 8px;
+   border: none;
+   padding-left: 30px;
+}
+
+.search_icon {
+   width: 66px;
+   height: 60px;
+   float: right;
+   border-radius: 0 8px 8px 0;
+   background-color: orange;
+}
+
+.search_icon > i {
+   color: white;
+   font-size: 30px;
+   padding: 13px 18px 15px 20px;
+}
+
+/* board */
+.board__list {
+   width: 100%;
+   padding: 40px 0 27px;
+   background-color: white;
+   overflow: hidden;
+   display: flex;
+}
+.board__list_box {
+   margin: auto;
+   flex-direction: row;
+   padding: 0 35px; /* 컨테이너 좌우 패딩 */
+}
+.box1 {
+   width: 260px;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+.box__name {
+   padding: 4px 0 11px;
+   border-bottom: 1px solid rgb(202, 202, 202);
+}
+.box__name > div {
+   color: black;
+   font-size: 16px;
+   font-weight: bold;
+   line-height: 20px;
+}
+.box1__content {
+   margin-top: 20px;
+}
+.content__box {
+   height: 140px;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   width: 260px;
+}
+.content__img {
+   width: 100%;
+   height: 100%;
+}
+
+.box2 {
+   width: 260px;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   margin-left: 20px;
+}
+.ellipsis {
+   height: 140px;
+   margin-top: 20px;
+}
+.ellipsis li {
+   width: 260px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   height: 30px;
+   font-size: 11px;
+   line-height: 30px;
+}
+
+.menu-more {
+   width: 60px;
+   height: 30px;
+   border-radius: 4px;
+   background-color: rgb(238, 238, 238);
+   text-align: center;
+   line-height: 30px;
+   float: right;
+}
+.menu-more a {
+   font-size: 12px;
+   color: rgb(117, 117, 117);
+}
+
+.box3 {
+   width: 260px;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   margin-left: 20px;
+}
+
+.box4 {
+   width: 260px;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+   margin-left: 20px;
+}
+
+.box4_content {
+   font-size: 11px;
+   height: 30px;
+   line-height: 30px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.ellipsis ul li:hover,
+.ellipsis .box4_content:hover {
+   background-color: #efefef;
+}
+
+.main__banner2 {
+   background-color: rgba(243, 245, 245, 1);
+   height: 280px;
+}
+
+.banner2__content {
+   width: 890px;
+   height: 280px;
+   margin: 0 auto;
+   box-sizing: border-box;
+   display: flex;
+}
+
+.banner2__img img {
+   width: 368px;
+}
+
+.banner2__box {
+   width: 520px;
+}
+
+.banner2__wright {
+   font-size: 17px;
+   font-weight: bold;
+   margin: 101px 0 40px 4px;
+}
+
+.btn__box {
+   display: flex;
+   flex-direction: row;
+   width: 400px;
+   justify-content: space-between;
+   text-align: center;
+}
+
+.banner2__btn {
+   cursor: pointer;
+   width: 190px;
+   height: 54px;
+   background-color: rgb(219, 219, 219);
+   border-radius: 6px;
+}
+
+.banner2__btn a {
+   font-size: 24px;
+   font-weight: bold;
+   height: 52px;
+   line-height: 52px;
+}
+.banner2__btn:hover {
+   background-color: rgb(194, 194, 194);
+}
+
+/* footer */
+footer {
+   min-height: 298px;
+   width: 100%;
+   margin: 0 auto;
+   overflow: hidden;
+   background-color: white;
+   color: rgb(153, 153, 153);
+   padding: 52px 0 20px;
+   position: relative;
+   text-align: center;
+}
+
+.footer__wrap {
+   width: 700px;
+   margin: 0 auto;
+   position: relative;
+}
+.footer__menu {
+   font-size: 12px;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   padding-bottom: 20px;
+}
+
+.footer__menu li {
+   border-right: 1px solid #929292;
+}
+.footer__menu li:last-child {
+   border-right: none;
+}
+
+.icon_box {
+   padding: 0 0 13px;
+   display: flex;
+   justify-content: center;
+}
+.footer_icon {
+   width: 32px;
+   height: 32px;
+   line-height: 28px;
+   text-align: center;
+   border: 1px solid rgb(150, 150, 150);
+   background-color: rgb(232, 232, 232);
+   margin-left: 15px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>position체크</title>
+      <style>
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+         #contents {
+            position: relative;
+            background-color: aqua;
+            width: 600px;
+            height: 400px;
+            margin: 0 auto; /* 가운데 정렬 */
+         }
+         h1 {
+            position: absolute;
+            color: white;
+            text-shadow: 3px 3px 0 black;
+            font-size: 80px;
+            bottom: 80px;
+            right: 60px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="contents">
+         <h1>CSS3</h1>
+      </div>
+   </body>
+</html>

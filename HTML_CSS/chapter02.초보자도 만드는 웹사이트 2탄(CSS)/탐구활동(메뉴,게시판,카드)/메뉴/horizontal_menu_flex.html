@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>horizontal_menu_flex</title>
+      <style>
+         *,
+         body {
+            margin: 0;
+            padding: 0;
+         }
+         ul {
+            list-style: none;
+            background-color: #333;
+            display: flex;
+         }
+         li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            display: block;
+         }
+
+         li a:hover:not(.active) {
+            background-color: #4d4d4d;
+         }
+         .active {
+            background-color: #448;
+         }
+      </style>
+   </head>
+   <body>
+      <ul>
+         <li><a href="#">홈</a></li>
+         <li><a href="#">뉴스</a></li>
+         <li><a href="#">블로그</a></li>
+         <li style="margin-left: auto">
+            <a class="active" href="#">로그인</a>
+         </li>
+      </ul>
+   </body>
+</html>

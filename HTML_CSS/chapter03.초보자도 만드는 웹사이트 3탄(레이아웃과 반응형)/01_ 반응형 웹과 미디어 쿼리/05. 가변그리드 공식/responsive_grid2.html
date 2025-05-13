@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>responsive_grid2</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            /* border + padding + content = width, height */
+            box-sizing: border-box;
+         }
+         #wrap {
+            width: 960px;
+            height: 500px;
+            background: skyblue;
+            margin: 0 auto;
+         }
+         #wrap div {
+            width: 300px;
+            height: 100%;
+            display: inline-block;
+         }
+         /* #wrap의 첫번째 div */
+         #wrap div:first-child {
+            margin-right: 200px;
+            background: salmon;
+         }
+         /* #wrap의 div중 2번째 */
+         #wrap div:nth-child(2) {
+            background: teal;
+         }
+
+         /* 해상도 0px ~ 959px */
+         @media all and (max-width: 959px) {
+            #wrap {
+               width: 100%;
+            }
+            #wrap div {
+               width: 31.25%;
+            }
+            #wrap div:first-child {
+               /* 가변 그리드 공식을 이용 */
+               /* margin-right / 960px * 100 즉 200 / 960 * 100 = 20.83333... */
+               margin-right: 20.83%;
+            }
+         }
+         /* 반응형 사이트를 제작할 때 가변그리드 공식이 자주 사용된다. 되게 중요 */
+      </style>
+   </head>
+   <body>
+      <div id="wrap">
+         <div></div>
+         <div></div>
+      </div>
+   </body>
+</html>

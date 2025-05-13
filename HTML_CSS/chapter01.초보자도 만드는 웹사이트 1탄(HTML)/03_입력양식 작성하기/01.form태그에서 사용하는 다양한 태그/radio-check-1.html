@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>radio-check-1</title>
+   </head>
+   <body>
+      <form action="">
+         <fieldset>
+            <legend>상품 선택</legend>
+            <p><b>주문할 상품을 선택해 주세요.</b></p>
+            <label for="box_s_3"><input type="checkbox" name="box" id="box_s_3" value="s_3" checked />선물용 3kg</label>
+            <label for="box_s_5"><input type="checkbox" name="box" id="box_s_5" value="s_5" />선물용 5kg</label>
+            <input type="checkbox" name="box" id="box_f_5" value="f_5" /><label for="box_f_5">가정용 5kg</label>
+            <!-- 꼭 input이 label안에 들어갈 필요는 없음 -->
+            <p><b>포장 선택</b></p>
+            <label for="gift_yes"><input type="radio" name="gift" id="gift_yes" value="yes" checked />선물포장</label>
+            <label for="gift_no"><input type="radio" name="gift" id="gift_no" value="no" />선물포장 안함</label>
+         </fieldset>
+         <fieldset>
+            <legend>배송 정보</legend>
+            <ul>
+               <li>
+                  <label for="user_name">이름</label>
+                  <input type="text" name="user_name" id="user_name" />
+               </li>
+               <li>
+                  <label for="addr">배송주소</label>
+                  <input type="text" name="addr" id="addr" />
+               </li>
+               <li>
+                  <label for="email">이메일</label>
+                  <input type="text" name="email" id="email" />
+               </li>
+               <li>
+                  <label for="phone">연락처</label>
+                  <input type="text" name="phone" id="phone" />
+               </li>
+               <li>
+                  <!-- <input type="submit" value="주문" />
+                  <input type="reset" value="취소" /> -->
+                  <button type="submit">주문</button>
+                  <button type="reset">취소</button>
+               </li>
+            </ul>
+         </fieldset>
+      </form>
+   </body>
+</html>

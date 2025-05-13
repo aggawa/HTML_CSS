@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>attr-3</title>
+      <style>
+         ul {
+            list-style-type: none;
+         }
+         li {
+            display: inline-block;
+            margin: 10px;
+         }
+         li a {
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            color: blue;
+         }
+         .flat {
+            background-color: #eee;
+            border: 1px solid #222;
+         }
+         a[class~='button'] {
+            box-shadow: rgba(0, 0, 0, 0.5) 4px 4px;
+            border: 1px solid #222;
+            border-radius: 5px;
+         }
+         /* 속성 선택자 */
+         /* class중에 button을 포함하고 있는 코드만 선택 */
+         /* ~ <-이거는 포함하는 이라고 생각하면 된다 */
+      </style>
+   </head>
+   <body>
+      <ul>
+         <li><a href="#" class="flat">메뉴1</a></li>
+         <li><a href="#" class="flat">메뉴2</a></li>
+         <li><a href="#" class="button">메뉴3</a></li>
+         <li><a href="#" class="flat button">메뉴4</a></li>
+      </ul>
+   </body>
+</html>

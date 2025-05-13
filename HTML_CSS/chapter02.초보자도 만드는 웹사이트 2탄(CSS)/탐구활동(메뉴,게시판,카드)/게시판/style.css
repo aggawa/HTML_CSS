@@ -1,0 +1,270 @@
+/* 스타일 지정 CSS 입니다. */
+
+/* ↓ 초기화 CSS 속성 */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 10px;
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: inherit; /* 상속: 부모요소의 속성값을 물려받는다. */
+}
+
+/* 여기까지가 초기화 설정
+초기화 설정이란 웹을 만들기 전 내가 원하는 기본값으로 초기화 해두는것을 말한다. */
+
+/* ↓ 공통 버튼 */
+.bt_wrap {
+   margin-top: 30px;
+   text-align: right; /* text-align 블록태그에만 사용할 수 있다.
+                        블록태그 안의 텍스트 or 인라인 태그 정렬 가능 */
+}
+
+.bt_wrap a {
+   display: inline-block;
+   min-width: 80px; /* 최소 너비 / 지정한 사이즈보다 작아지지 않게 함 */
+   margin-left: 10px;
+   padding: 10px;
+   border: 1px solid #000;
+   border-radius: 2px;
+   font-size: 1.4rem;
+   text-align: center;
+}
+
+.bt_wrap a:hover {
+   text-decoration: underline;
+}
+
+.bt_wrap a.on {
+   background-color: #000;
+   color: #fff;
+}
+
+/* ↓ index.html */
+.wrap {
+   width: 1000px;
+   margin: 0 auto; /* 정렬 */
+}
+
+.board_list {
+   width: 100%;
+   border-top: 1px solid #444444;
+   border-collapse: collapse;
+   font-size: 1.5rem;
+}
+
+.board_list caption {
+   padding: 30px;
+}
+
+.board_list th,
+.board_list td {
+   border-bottom: 1px solid #444444;
+   padding: 10px;
+   text-align: center;
+}
+
+.board_list td.title > a:hover {
+   text-decoration: underline;
+}
+
+.board_page {
+   margin-top: 30px;
+   text-align: center;
+   /* display: flex;
+   justify-content: center;  */
+}
+
+.board_page a {
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+   box-sizing: border-box;
+   border-left: 0;
+   line-height: 32px; /* height와 line-height를 같이 쓰면(같은값) 수직상의 가운데 정렬 */
+}
+
+.board_page a:hover {
+   text-decoration: underline;
+}
+
+.board_page a.bt {
+   font-size: 1.2rem;
+   letter-spacing: -1px;
+}
+
+.board_page a.num {
+   font-size: 1.4rem;
+}
+
+.board_page a.num.on {
+   background-color: #000;
+   color: #fff;
+}
+
+/* ↓ write.html, view.html, edit.html */
+.board_wrap {
+   width: 1000px;
+   margin: 0 auto;
+}
+
+.board_title {
+   margin: 30px 10px;
+}
+
+.board_title strong {
+   font-size: 3rem;
+}
+
+.board_title p {
+   font-size: 1.4rem;
+   margin-top: 5px;
+}
+
+/* write.html */
+
+.board_write {
+   border-top: 2px solid #000;
+}
+
+.board_write .title,
+.board_write .info {
+   padding: 15px;
+}
+
+.board_write .info {
+   border-top: 1px dashed #ddd;
+   border-bottom: 1px solid #000;
+   font-size: 0; /* 글쓴이, 비밀번호가 한 줄에 오도록 하는것임
+                  .info dl에 width값을 줄이는 것으로도 해결 가능 */
+   /* inline-block 요소 사이의 공백(띄어쓰기 or 줄바꿈)을 글자처럼 인식해서 너비 차지
+      inline-block을 감싸는 부모태그에 font-size:0을 줘서 공백 문자가 보이지 않도록 만듬 */
+}
+
+.board_write .info dl {
+   display: inline-block;
+   width: 50%;
+   vertical-align: middle; /* 수직상에서의 가운데 정렬 */
+}
+
+.board_write .title dt,
+.board_write .title dd,
+.board_write .info dt,
+.board_write .info dd {
+   display: inline-block;
+   vertical-align: middle;
+   font-size: 1.4rem;
+}
+
+.board_write .title dt,
+.board_write .info dt {
+   width: 100px;
+}
+
+.board_write .title dd {
+   width: calc(100% - 100px);
+}
+/* ↑↓ calc(A - B) / A값은 %, B값은 px
+   dd를 감싸고있는 dl의 n%에서 npx 뺀 만큼 width를 주겠다 는 말임! */
+.board_write .title dl {
+   font-size: 0;
+}
+
+.board_write .title input[type='text'],
+.board_write .info input[type='text'],
+.board_write .info input[type='password'] {
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+.board_write .title input[type='text'] {
+   width: 80%;
+}
+
+.board_write .cont {
+   border-bottom: 1px solid black;
+}
+
+.board_write .cont textarea {
+   display: block;
+   width: 100%;
+   height: 300px;
+   padding: 15px;
+   box-sizing: border-box;
+   border: 0;
+   font-size: 1.4rem; /* 입력받는 폰트 사이즈 조절 */
+   resize: vertical; /* textarea 사이즈 조절 (수직) */
+}
+
+/* ↓ view.html */
+.board_view {
+   width: 100%;
+   border-top: 2px solid #000;
+}
+
+.board_view .title {
+   padding: 20px 15px;
+   border-bottom: 1px dashed #ddd;
+   font-size: 2rem;
+}
+
+.board_view .info {
+   padding: 15px;
+   border-bottom: 1px solid #999;
+   font-size: 0; /* 위에 했던것과 동일한 이유 */
+}
+
+.board_view .info dl {
+   display: inline-block;
+   padding: 0 20px;
+   position: relative;
+}
+
+.board_view .info dl::before {
+   content: '';
+   position: absolute;
+   top: 5px;
+   left: 0;
+   display: block;
+   width: 1px;
+   height: 13px;
+   background-color: #ddd;
+}
+
+.board_view .info dl:first-child::before {
+   display: none;
+}
+
+.board_view .info dl:first-child {
+   padding-left: 0;
+}
+
+.board_view .info dl dt,
+.board_view .info dl dd {
+   display: inline-block;
+   font-size: 1.4rem; /* 부모태그의 폰트 사이즈가 0이면 안 보임 */
+   /* 그러므로 font-size 지정해줌 */
+}
+
+.board_view .info dl dd {
+   color: #777;
+   margin-left: 10px;
+}
+
+.board_view .cont {
+   padding: 15px;
+   border-bottom: 1px solid #000;
+   line-height: 160%;
+   font-size: 1.4rem;
+}

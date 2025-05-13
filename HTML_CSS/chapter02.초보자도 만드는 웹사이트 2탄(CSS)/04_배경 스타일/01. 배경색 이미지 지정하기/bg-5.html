@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>bg-5</title>
+      <style>
+         #container {
+            width: 1100px;
+            margin: 50px auto;
+         }
+         .box {
+            float: left;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            background-image: url('../images/bg4.jpg');
+            background-repeat: no-repeat;
+            background-position: left top;
+         }
+         #bg1 {
+            background-size: auto; /* 원래 크기 출력 */
+         }
+         #bg2 {
+            background-size: 200px; /* 이미지의 너비 200px지정 */
+         }
+         #bg3 {
+            background-size: 50%; /* 이미지 너비 50%지정 */
+         }
+         #bg4 {
+            background-size: 100% 100%; /* 너비와 높이 모두 100% 지정 */
+         }
+         #bg5 {
+            background-size: contain; /* 비율을 유지하며 요소에 맞게 포함한다 */
+         }
+         #bg6 {
+            background-size: cover; /* 비율을 유지하며 요소를 완전히 덮도록 배경이미지 표시 */
+         }
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <div class="box" id="bg1"></div>
+         <div class="box" id="bg2"></div>
+         <div class="box" id="bg3"></div>
+         <div class="box" id="bg4"></div>
+         <div class="box" id="bg5"></div>
+         <div class="box" id="bg6"></div>
+      </div>
+   </body>
+</html>

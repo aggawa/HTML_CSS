@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>reponsive_video_youtube1-1</title>
+      <style>
+         body {
+            margin: 0;
+         }
+         .video_container {
+            width: 1200px;
+            background: royalblue;
+            margin: 0 auto;
+            height: 400px;
+            text-align: center;
+         }
+
+         /* 768px ~ 1023px */
+         @media all and (min-width: 768px) and (max-width: 1023px) {
+            .video_container {
+               position: relative;
+               padding-bottom: 56.25%;
+               width: 100%;
+            }
+            .video_container iframe {
+               width: 100%;
+               height: 100%;
+            }
+         }
+         /* 0px ~ 767px */
+         @media all and (max-width: 767px) {
+            .video_container {
+               position: relative;
+               padding-bottom: 56.25%;
+               width: 100%;
+            }
+            .video_container iframe {
+               width: 100%;
+               height: 100%;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="video_container">
+         <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/a4zsrYrdaZE?si=yfqmjLHiISwO8Cu8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+         ></iframe>
+      </div>
+   </body>
+</html>

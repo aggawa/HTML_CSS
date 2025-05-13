@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>flex-8_4</title>
+      <style>
+         .container {
+            width: 80%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+         }
+         .box {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            background-color: #222;
+         }
+
+         /* flex -  */
+         #box1 {
+            /* flex-grow: 1; */
+            flex: 1;
+         } /* flex-grow */
+         #box2 {
+            /* flex-basis: 30px; */
+            flex: 0 1 30px;
+         } /* flex-grow, flex-shrink, flex-basis 순서 */
+         #box3 {
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            flex: 2 2;
+         } /* 둘다 단위가 없을시 flex-grow, flex-shink 순서 */
+         #box4 {
+            /* flex-grow: 1; */
+            /* flex-basis: 40px; */
+            flex: 1 40px;
+         } /* 단위가 없는값은 flex-grow, 단위가 있는 값은 flex-basis */
+         #box5 {
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            /* flex-basis: 0; */
+            flex: 2 2 0;
+         }
+         /* 값이 살짝 바뀌는데 정밀한 결과를 원하면 따로따로 주는것이 좋다 */
+         p {
+            color: #fff;
+            text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="box" id="box1"><p>1</p></div>
+         <div class="box" id="box2"><p>2</p></div>
+         <div class="box" id="box3"><p>3</p></div>
+         <div class="box" id="box4"><p>4</p></div>
+         <div class="box" id="box5"><p>5</p></div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,15 @@
+/* 체크퀴즈 2 */
+/* 홀수, 짝수 li에 스타일 적용하기 */
+ul li:nth-child(2n) {
+   background-color: darkblue;
+   color: white;
+   padding: 10px;
+}
+ul li:nth-child(2n + 1) {
+   background-color: lightgray;
+   padding: 10px;
+}
+
+/* ul li:nth-child(even){} 짝수 */
+/* ul li:nth-child(odd){} 홀수 */
+/* even, add로도 짝수, 홀수를 선택할 수 있다. */

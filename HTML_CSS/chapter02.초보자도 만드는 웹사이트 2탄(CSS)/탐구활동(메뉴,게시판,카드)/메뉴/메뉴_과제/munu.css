@@ -1,0 +1,31 @@
+*,
+body {
+   margin: 0;
+   padding: 0;
+}
+body {
+   height: 2000px;
+}
+img {
+   width: 50px;
+}
+ul {
+   overflow: hidden;
+   margin: 0 auto;
+   width: 800px;
+}
+li {
+   display: inline-block;
+   padding: 2px 14px;
+}
+.bit {
+   float: right;
+}
+a:hover {
+   border: 4px dotted #fbff00;
+}
+nav {
+   position: fixed;
+   width: 100%;
+   background-color: #2599db;
+}

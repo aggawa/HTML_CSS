@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+         }
+
+         html,
+         body {
+            height: 100%;
+         }
+
+         #wrap {
+            width: 960;
+            height: 100%;
+            background-color: skyblue;
+            margin: 0 auto;
+
+            max-height: 500px;
+         }
+         /* max-height - 절대 이 값보다는 작아질 수 없다. */
+         /* 졸라 늘려도 960px이상 늘어나지 않음 */
+         /* height랑 같이 max-height를 사용해 최소 너비 제한 */
+      </style>
+   </head>
+   <body>
+      <div id="wrap"></div>
+   </body>
+</html>

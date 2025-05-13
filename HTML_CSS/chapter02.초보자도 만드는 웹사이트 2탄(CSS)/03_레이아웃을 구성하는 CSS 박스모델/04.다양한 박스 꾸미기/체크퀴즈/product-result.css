@@ -1,0 +1,38 @@
+#container {
+   margin: 0 auto;
+   width: 600px;
+   border: none; /* 중간에 선 생기는거 삭제 */
+} /* 이걸 잊었네 가운데 정렬 */
+/* margin: 0 auto 주고 width지정하면 됨 */
+div {
+   border: 1px dotted black;
+   /* 다 같은 div니까 한번에 할 수 있다. */
+   margin-bottom: 30px;
+   /* 붙어있는 박스 떨구기 */
+}
+#description {
+   border-top-right-radius: 25px;
+   border-top-left-radius: 25px;
+   /* 둥글게 만들기 */
+   padding: 15px; /* 안쪽 여백 */
+}
+#receipe {
+   padding: 15px; /* 안쪽 여백 */
+}
+#package {
+   padding: 15px; /* 안쪽 여백 */
+   border-bottom-right-radius: 25px;
+   border-bottom-left-radius: 25px;
+   /* 둥글게 만들기 */
+}
+table {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+th,
+td {
+   border: 1px solid black;
+   padding: 10px; /* 안쪽 여백 */
+}
+/* 공통으로 쓰이는 것들을 
+최대한 모아서 처리하는 연습을 하자 */

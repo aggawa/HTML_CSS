@@ -1,0 +1,58 @@
+#container {
+   width: 1000px;
+   margin: 20 auto;
+}
+
+h1 {
+   text-align: center;
+}
+
+.prod-list {
+   list-style: none;
+   padding: 0; /* 디폴트 패딩 지우기 / 불릿이 있던 자리 */
+}
+
+/* 사진 한 줄로 만드는건데 inline-block이랑 float 방법이 있음 */
+.prod-list li {
+   float: left;
+   margin: 10px;
+   position: relative;
+   overflow: hidden;
+   /* .caption카드가 li 태그 범위를 벗어나는 것을 숨겨준다. */
+}
+
+.prod-list img {
+   width: 300px;
+   margin: 0;
+   padding: 0;
+   float: left;
+   /* 밑에 살짝 거슬리는 것 때문에 동일하게 float: left를 준다 */
+}
+
+.prod-list .caption {
+   /* 이미지의 width, height와 똑같이 지정 */
+   width: 300px;
+   height: 200px;
+   background-color: rgba(0, 0, 0, 0.6);
+   /* 투명도를 주기위해 rgba 사용 */
+   padding-top: 20px;
+   opacity: 0;
+   /* 투명도를 지정/ 0~1사이의 값/ 0을 줘서 값을 숨김 */
+   position: absolute;
+   top: 200px;
+   /* ↑ img의 height와 똑같이 맞춰준다. */
+   transition: all 0.6s ease-in-out;
+}
+/* ↓ li를 hover 했을 때 .caption에 적용될 속성을 정의 */
+.prod-list li:hover .caption {
+   opacity: 1;
+   /* hover시 투명도가 사라짐 */
+   transform: translateY(-200px);
+   /* top200px로 내려왔던 caption을 위로 200px 만큼 올림(Y축) */
+}
+
+.prod-list .caption h2,
+.prod-list .caption p {
+   color: white;
+   text-align: center;
+}

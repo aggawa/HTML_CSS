@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>flex-3</title>
+      <style>
+         .container {
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            display: flex;
+         }
+
+         .box {
+            padding: 5px 45px;
+            margin: 5px;
+            background-color: #222;
+         }
+         p {
+            color: #fff;
+            text-align: center;
+         }
+         /* flex-flow = flex-dirextion + flex-wrap을 같이 적용 */
+         #opt1 {
+            flex-flow: row wrap;
+         }
+         /* row로 정렬 / wrap - 한줄에 감싸 표시 */
+         #opt2 {
+            flex-flow: column-reverse;
+         }
+         /* column으로 정렬 / reverse - 아이템 순서를 반대로 해서 감싸 표시 */
+      </style>
+   </head>
+   <body>
+      <div class="container" id="opt1">
+         <div class="box"><p>1</p></div>
+         <div class="box"><p>2</p></div>
+         <div class="box"><p>3</p></div>
+         <div class="box"><p>4</p></div>
+         <div class="box"><p>5</p></div>
+         <div class="box"><p>6</p></div>
+      </div>
+      <div class="container" id="opt2">
+         <div class="box"><p>1</p></div>
+         <div class="box"><p>2</p></div>
+         <div class="box"><p>3</p></div>
+         <div class="box"><p>4</p></div>
+         <div class="box"><p>5</p></div>
+         <div class="box"><p>6</p></div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,12 @@
+/* div p:first-child {
+   background-color: red;
+} */
+/* ↑ 이건 적용안됨 왜일까 ↓ */
+
+div p:first-of-type {
+   background-color: red;
+}
+/* 일반 구조 선택자 - 종류 상관없이 무조건 첫번째 태그를 검색 */
+/* 형태 구조 선택자 - 지정된 태그 중에서 첫번째 태그를 검색 */
+/* div의 첫번째 태그는 h1인데 p를 선언한 상태여서 first-child를 썻을 경우에는 적용되지 않는다. */
+/* 형태 구조 선택자인 first-of-type를 사용하면 적용할 수 있다. */

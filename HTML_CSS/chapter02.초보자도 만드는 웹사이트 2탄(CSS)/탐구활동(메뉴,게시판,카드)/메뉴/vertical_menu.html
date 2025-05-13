@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>vertical_menu</title>
+      <style>
+         *,
+         body {
+            margin: 0;
+            padding: 0;
+         }
+         ul {
+            list-style-type: none;
+            background-color: #f1f1f1;
+            width: 200px;
+         }
+         a {
+            color: black;
+            text-decoration: none;
+            padding: 8px 16px;
+            /* padding을 올바르게 적용하기 위해서는 
+               display를 block 혹은 inline-block 적용 */
+            display: block;
+         }
+         a:hover {
+            background-color: black;
+            color: white;
+         }
+         /* ?:hover <- 커서를 올렸을 때 바뀌는 머시기 */
+      </style>
+   </head>
+   <body>
+      <ul>
+         <li><a href="#">홈</a></li>
+         <li><a href="#">뉴스</a></li>
+         <li><a href="#">블로그</a></li>
+         <li><a href="#">쇼핑</a></li>
+      </ul>
+   </body>
+</html>
+<!-- 수직메뉴 만들기 -->

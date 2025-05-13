@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>responsive_grid1</title>
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+         }
+         #wrap {
+            width: 960px;
+            height: 500px;
+            background: skyblue;
+            margin: 0 auto;
+         }
+         #wrap div {
+            width: 300px;
+            height: 100%;
+            background: salmon;
+         }
+         /* 해상도 0px ~ 959px */
+         @media all and (max-width: 959px) {
+            #wrap {
+               width: 100%;
+            }
+            #wrap div {
+               width: 31.25%;
+            }
+            /* 자식 박스 너비 / 부모 박스 너비 * 100 = 결과값 / 위에서는 결과값: 31.25 */
+            /* ↑ 가변 그리드 공식 */
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrap">
+         <div></div>
+      </div>
+   </body>
+</html>
