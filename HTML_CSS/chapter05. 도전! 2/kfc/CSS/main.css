@@ -265,3 +265,15 @@ body {
    border: 1px solid none;
    border-radius: 20px;
 }
+
+/* 767px ~ 1024px */
+@media all and (min-width: 767px), all and (max-width: 1024px) {
+}
+
+/* 766px 이하 */
+@media all and (max-width: 766px) {
+   .main .banner1 .banner1__content ul li {
+      display: block;
+      width: 100%;
+   }
+}
