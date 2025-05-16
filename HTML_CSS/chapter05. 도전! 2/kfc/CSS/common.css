@@ -9,15 +9,17 @@
 .header {
    position: relative;
    margin: 0 auto;
+   height: 10rem;
 }
 #header-pc {
-   position: relative;
+   position: fixed;
+   width: 100%;
+   background-color: white;
    display: block;
    z-index: 3100;
 }
 #header-pc > .container {
    position: relative;
-   background-color: white;
    z-index: 3100;
    width: 100%;
 }
@@ -96,9 +98,59 @@
    box-sizing: border-box;
 }
 
-.container .gnb > .cover .category .category-list {
-   float: right;
+/* 망해버린 메뉴 */
+/* #toggle-menu {
+   display: none;
+}
+
+.menu-toggle-label {
    display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   z-index: 1001;
+}
+.menu-toggle-label span {
+   height: 3px;
+   width: 25px;
+   background: #000;
+   margin: 4px 0;
+}
+
+.container .gnb > .cover .category .category-list {
+   display: none;
+   flex-direction: column;
+   width: 100%;
+   top: 100%;
+   left: 0;
+   z-index: 1000;
+}
+#toggle-menu:checked + .menu-toggle-label + .category-list {
+   display: flex;
+} */
+/* 망해버린 메뉴 여까지 고치셈 막 체크박스 하니까 세로로 쫙 나와벌임 */
+/* 만신창이가 되.. */
+.container .gnb > .cover .category .category-list {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: top;
+   position: static;
+}
+.category .category-list li {
+   position: relative;
+}
+.category .category-list li > a {
+   display: block;
+   color: black;
+   font-weight: bold;
+   padding-inline-start: 15px 20px;
+}
+.category .category-list li .submenu {
+   position: absolute;
+   display: none;
+}
+.category .category-list > li:hover .submenu {
+   display: block;
 }
 
 /* 푸터 */
